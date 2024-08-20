@@ -16,20 +16,6 @@ a {
     text-decoration: none;
     color: var(--white); /* Color del texto de los enlaces */
 }
-.logo{
-    display: flex;
-    align-items: center;
-}
-.logo-nombre{
-    font-size: 20px;
-    font-family: "Nunito";
-    font-weight: bold;
-    color: var(--acento-orange)
-}
-.logo img {
-    width: 80px; /* Ajusta el tamaño según sea necesario */
-    margin-left:80px ;
-}
 
 .enlaces {
     text-align: center;
@@ -51,32 +37,41 @@ nav a{
 nav a:hover{
     color: var(--secondary-light-blue);
 }
-.redes-sociales{
+.logout-wrap{
     display: flex;
-    justify-content: space-evenly;
-    width: 200px;
-    margin-right: 20px;
+    text-align: center;
 }
-.redes-sociales a{
-    display: flex;
-    align-items: end;
-    width: 200px;
+.logout-box a{
+    width: 20px;
 }
-.redes-sociales img {
-    width: 45px; /* Ajusta el tamaño según sea necesario */
+
+#logout-btn {
+    background-color: #FF6F6F  ; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    width: 60%;
+    height: 60%;
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 15px; /* Espaciado interno del botón */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    outline: none; /* Elimina el contorno por defecto */
 }
-.redes-sociales img:hover {
-    width: 50px; /* Esto despues animalo mejor*/
+
+
+.active-user{
+    margin: 10px;
 }
+.user-name {
+    font-weight: bold;
+    color: #FF5733; /* Color especial para el nombre del usuario */
+  }
+
 .nav_toggle{
     display: none;
   }
-.flecha{
-    display: none;
-}
-.enlaces img{
-    display: none;
-}
 
 @media (max-width: 768px){
     header {
@@ -95,19 +90,6 @@ nav a:hover{
         text-decoration: none;
         color: var(--white); /* Color del texto de los enlaces */
     }
-    .logo{
-        display: flex;
-        align-items: center;
-    }
-    .logo-nombre{
-        color: var(--acento-orange);
-        font-size: 12px;
-        margin-left: 5px;
-    }
-    .logo img {
-        width: 50px; /* Ajusta el tamaño según sea necesario */
-        margin-left: 10px;
-    }
     
     .enlaces {
         text-align: center;
@@ -116,16 +98,6 @@ nav a:hover{
         font-weight: 800px;
         padding-right: 10px;
         font-size: 18px;
-    }
-    
-    .redes-sociales a{
-        width: 20px;
-    }
-    .redes-sociales img{
-        width: 35px;
-    }
-    .redes-sociales img:hover {
-        width: 35px; /* Esto despues animalo mejor*/
     }
     
 
@@ -155,27 +127,7 @@ nav a:hover{
         height: 60px;
         align-items: center;
     }
-    .nav-container img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        filter: brightness(0) invert(1);
-        width: 30px;
-        height: 30px;
-        margin: 0 10px;
-        object-fit: cover;
-    }
-    .flecha{
-        position: absolute;
-        right: 30px;
-        width: 15px !important; 
-        height: 15px !important;
-    }
-    .flecha img{
-        width: 15px !important; 
-        height: 15px !important;
-        object-fit:cover
-    }
+  
     .nav_toggle{
         display: flex !important;
         width: 60px;
@@ -220,13 +172,4 @@ nav a:hover{
         margin-right:15px;
         margin-left: 30px;
     }
-    .flecha{
-        position: absolute;
-        right: 10px;
-    }
-    .flecha img{
-        width: 11px !important; 
-        height: 15px !important;
-        object-fit:cover
-    }  
 }

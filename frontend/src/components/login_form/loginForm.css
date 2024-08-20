@@ -1,0 +1,58 @@
+.login-form-wrapper {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Fondo oscuro pero diferente al del body */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.iniciar-sesion-box h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: #f0f0f0; /* Texto de título en blanco suave */
+    border-bottom: 2px solid #007fca; /* Subrayado con un color elegante */
+    padding-bottom: 10px;
+}
+
+.username-box, .password-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.username, .password {
+    font-size: 14px;
+    width: 17%;
+    margin-right: 10px;
+    color: #cfcfcf; /* Texto en gris claro */
+}
+
+button#login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007fca; /* Color de fondo del botón */
+    color: #f0f0f0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button#login-btn:hover {
+    background-color: #23A3E8; /* Color de fondo del botón en hover */
+}
+input[type="text"], input[type="password"] {
+    flex: 2;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0; /* Fondo del input en gris oscuro */
+    color: #f0f0f0; /* Texto del input en blanco */
+    outline: none;
+}
+

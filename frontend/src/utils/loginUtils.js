@@ -2,13 +2,14 @@ import { useContext } from "react";
 import loginService from "../services/login";
 import contactoService from "../services/contactos";
 import { Context } from "../context/Context";
-
+import { useNavigate } from 'react-router-dom';
 
 export const loginUtils = () => {
   
-const { user, setMessage,setUser}  = useContext(Context);
+const { user,setUser, setMessage}  = useContext(Context);
 
 const handleLogin = async (username, password) => {
+
     try {
         const user = await loginService.login({
         username,
@@ -21,5 +22,8 @@ const handleLogin = async (username, password) => {
         setMessage("error" + exception.response.data.error);
     }
     };
-    return { user, handleLogin };
+
+
+
+    return { user,setUser, handleLogin };
 }

@@ -1,0 +1,75 @@
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 60%;
+    border-bottom: 1px solid #e0e0e0; /* Línea divisoria sutil */
+    transition: background-color 0.3s ease;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-bottom: 10px; /* Espacio entre elementos */
+  }
+  .blog-box {
+    width: 60%;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .contact-item:hover {
+    background-color: #f9f9f9; /* Color de fondo al pasar el cursor */
+  }
+  
+  .contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333; /* Texto principal */
+  }
+  
+  .contact-number {
+    font-size: 14px;
+    color: #666666; /* Texto secundario */
+  }
+  
+  .contact-actions {
+    display: flex;
+    gap: 10px; /* Espaciado entre botones */
+  }
+  
+  .action-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .action-btn.ignore {
+    background-color: #ff5722; /* Color de fondo para el botón de ignorar */
+    color: #ffffff; /* Color del texto */
+  }
+  
+  .action-btn.ignore:hover {
+    background-color: #e64a19; /* Color de fondo al pasar el cursor */
+  }
+  
+  .action-btn.add {
+    background-color: #4caf50; /* Color de fondo para el botón de agregar */
+    color: #ffffff; /* Color del texto */
+  }
+  
+  .action-btn.add:hover {
+    background-color: #388e3c; /* Color de fondo al pasar el cursor */
+  }
+  

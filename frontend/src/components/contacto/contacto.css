@@ -1,0 +1,64 @@
+.blog-box {
+    max-width: 600px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.blog-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    padding: 10px; /* Ajusta el padding según tus necesidades */
+    gap: 10px; /* Espacio entre las celdas */
+}
+
+.blog-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Ajusta el padding según tus necesidades */
+}
+  
+  
+  .blog-cell {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+  }
+  
+  .nombre {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .numero {
+    color: #666;
+  }
+  
+  .actions {
+    text-align: right;
+  }
+  
+  #delete-btn {
+    padding: 6px 12px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+  }
+  .blog-row{
+    display: flex;
+  }
+  #delete-btn:hover {
+    background-color: #ff0000;
+  }
+  

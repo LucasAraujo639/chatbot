@@ -1,6 +1,7 @@
 import { useState } from "react";
+import './contacto.css'
 
-const Contacto = ({ contacto, deleteContacto, username }) => {
+export const Contacto = ({ contacto, deleteContacto, username }) => {
   const [visible, setVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -14,22 +15,22 @@ const Contacto = ({ contacto, deleteContacto, username }) => {
   };
 
   return (
-    <div className="blog">
-      <div>
-        <span className="nombre">{contacto.nombre} - </span>
-        <span className="numero">{contacto.numero}</span>{" "}
-        {/* Esto quiere decir que si el usuario que agrego el contacto puede eliminar los contactos si es igual al usuario autenticado */}
-        {contacto.user.username === username && (
-            <button id="delete-btn" onClick={handleDelete}>
-              delete
-            </button>
-          )}
+    <div className="blog-box">
+      <div className="blog-table">
+          <div className="blog-cell nombre">{contacto.nombre}</div>
+          <div className="blog-cell numero">{contacto.numero}</div>
+          {contacto.user.username === username && (
+          <div className="blog-cell actions">
+              <button id="delete-btn" onClick={handleDelete}>Eliminar</button>
+          </div>
+      )}
+      </div>
+    
           {/* para ver mas detalles del contacto pero no hay asi que lo comento */}
         {/* <button id="view-btn" onClick={toggleVisibility}>
           {visible ? "hide" : "show"}
         </button> */}
-      </div>
-
+      
       {/* {visible && (
         <div className="blog-details">
           <div>{blog.url}</div>
@@ -41,4 +42,4 @@ const Contacto = ({ contacto, deleteContacto, username }) => {
   );
 };
 
-export default Contacto;
+

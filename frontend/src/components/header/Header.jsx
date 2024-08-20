@@ -1,33 +1,56 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './header.css'
+import { loginUtils } from '../../utils/loginUtils';
+import contactoService from "../../services/contactos";
+
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false) //Para el menu hamburgesa
+  const {user,setUser} = loginUtils();
 
+  //Guarda el token en el localStorgae y trata de obtenerlo de ahi para que el usuario no tenga que volver a iniciar sesion
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem("loggedContactoappUser");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      setUser(user);
+      contactoService.setToken(user.token);
+    }
+  }, []);
+
+  const navigate = useNavigate();
   const handleLogout = () => {
     window.localStorage.clear();
+    
     setUser(null);
-  };
+    navigate('/login');
+    };
   return (
     <header>
-      <Link to="/" className="logo">
-        <img src={logo} alt="Logo" />
-        <h2 className='logo-nombre'>C&O SERVICIOS</h2>
-      </Link>
       <nav className={`enlaces ${isOpen && "open"}`}>
         <Link to="/">
           <div className='nav-container '>
-            <img src={casita} alt="home"/>
-            Inicio
-            <img className="flecha" src={flecha} alt="arrow"/>
+            Home
+          </div>
+        </Link>
+        <Link to="/contactos">
+          <div className='nav-container '>
+            Contactos
+          </div>
+        </Link>
+        <Link to="/acciones">
+          <div className='nav-container'>
+            Acciones
           </div>
         </Link>
       </nav>
 
-      <div className="redes-sociales">
-        <p>
-            <span className="active-user">{user.name}</span> logged in{" "}
+      <div className="logout-box">
+        <p className='logout-wrap'>
+          <span className="active-user">
+            <span className="user-name">{user?.name || 'Guest'}</span> logged in
+          </span>
             <button id="logout-btn" onClick={handleLogout}>
               Logout
             </button>

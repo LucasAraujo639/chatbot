@@ -1,0 +1,68 @@
+.contacto-form-wrapper {
+    background-color: #f8f9fa; /* Fondo negro para el contenedor */
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra suave para darle profundidad */
+}
+
+h3 {
+    color: #000; /* Texto blanco */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+h2{
+    color: #242424; /* Texto blanco */
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    margin: 7px 0px;
+    text-align: center;
+}
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: grey; /* Color gris claro para las etiquetas */
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #007FCA; /* Borde inferior azul */
+    color: #ffffff;
+    outline: none;
+    border-radius: 5px 5px 0 0; /* Bordes superiores redondeados */
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #888888; /* Color gris para el placeholder */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007FCA; /* Botón azul */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #23A3E8; /* Azul más oscuro al pasar el cursor */
+}
